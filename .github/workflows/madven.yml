@@ -25,6 +25,7 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    if: ${{ always() }}
     steps:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
